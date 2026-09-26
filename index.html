@@ -432,6 +432,183 @@
       border-color:rgba(255,150,150,.25)!important;
     }
 
+  
+    /* iPhone / mobile final polish */
+    @media(max-width:600px){
+      body{overflow-x:hidden}
+      .wrap{width:calc(100% - 20px)}
+      .nav{
+        position:sticky;
+        top:0;
+        z-index:80;
+        background:rgba(6,26,49,.96);
+      }
+      .nav-in{
+        min-height:72px;
+        height:auto;
+        padding:8px 0;
+        gap:10px;
+      }
+      .brand-logo{
+        height:50px !important;
+        max-width:120px;
+      }
+      .nav .btn{
+        padding:10px 13px !important;
+        font-size:13px !important;
+        line-height:1.15;
+        min-height:42px;
+        white-space:normal;
+        text-align:center;
+      }
+
+      .hero{padding:14px 0 22px}
+      .hero-grid{gap:14px}
+      .hero-copy,
+      .hero-card{
+        border-radius:24px;
+      }
+      .hero-copy{
+        padding:28px 20px;
+        min-height:auto;
+      }
+      .eyebrow{margin-bottom:12px}
+      .lab-kicker{margin-bottom:10px}
+      h1{
+        font-size:clamp(40px,12.7vw,56px);
+        line-height:.96;
+        letter-spacing:-.055em;
+        margin-bottom:18px;
+      }
+      .hero-copy p{
+        font-size:17px;
+        line-height:1.55;
+        margin-bottom:22px;
+      }
+      .formula-strip{
+        margin-top:14px;
+        font-size:9px;
+      }
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:9px;
+      }
+      .hero-actions .btn{
+        width:100%;
+        min-height:52px;
+      }
+
+      section{padding:26px 0}
+      .section-head{
+        display:block;
+        margin-bottom:16px;
+      }
+      .section-head h2{
+        font-size:clamp(31px,9vw,40px);
+        line-height:1.02;
+      }
+      .section-head p{
+        font-size:16px;
+        line-height:1.5;
+        margin-top:10px;
+      }
+
+      .hero-card,
+      .work-note,
+      .card,
+      .config{
+        padding:20px 16px;
+        border-radius:22px;
+      }
+
+      .steps-plain .step-plain{
+        padding:14px 0 !important;
+      }
+
+      .form{
+        grid-template-columns:1fr !important;
+        gap:12px !important;
+      }
+      .field,
+      .field.full{
+        grid-column:1/-1 !important;
+        min-width:0;
+      }
+      label{
+        font-size:14px;
+        line-height:1.35;
+      }
+      input,select,textarea{
+        width:100%;
+        max-width:100%;
+        font-size:16px !important; /* prevents iOS zoom */
+        line-height:1.35;
+        padding:14px 15px;
+        border-radius:16px;
+      }
+      select{
+        min-height:52px;
+      }
+      textarea{
+        min-height:130px;
+      }
+      #submitBtn{
+        width:100%;
+        min-height:56px;
+        font-size:17px;
+      }
+      .fine{
+        font-size:13px;
+        line-height:1.45;
+      }
+      .result{
+        padding:18px 16px !important;
+        border-radius:20px !important;
+        margin-top:16px !important;
+      }
+      .result h3{
+        font-size:25px;
+        line-height:1.12;
+      }
+      .result p{
+        font-size:16px;
+        line-height:1.5;
+      }
+
+      .process{
+        grid-template-columns:1fr !important;
+        gap:12px !important;
+      }
+      .process .card{
+        padding:18px 16px;
+      }
+      .process strong{
+        font-size:34px;
+      }
+
+      .footer{
+        padding:22px 18px;
+        gap:16px;
+      }
+      .footer .btn{
+        width:100%;
+      }
+    }
+
+    @media(max-width:390px){
+      .nav .btn{
+        max-width:150px;
+        font-size:12px !important;
+        padding:9px 11px !important;
+      }
+      .brand-logo{height:46px !important}
+      h1{font-size:42px}
+      .hero-copy{padding:24px 18px}
+      .hero-card,.work-note,.card,.config{padding:18px 14px}
+      .section-head h2{font-size:31px}
+    }
+
   </style>
 </head>
 <body>
@@ -538,7 +715,7 @@
           </form>
           <div class="result" id="result" role="status" aria-live="polite">
             <h3 style="margin-bottom:8px">Danke! Deine Anfrage ist angekommen.</h3>
-            <p style="margin:0;color:#dbe8f6">Wir schauen sie uns an und melden uns persönlich bei dir.</p>
+            <p style="margin:0;color:#dbe8f6">Wir melden uns persönlich bei dir.</p>
           </div>
           <div class="result" id="errorResult" role="alert" aria-live="assertive">
             <h3 style="margin-bottom:8px">Das hat gerade nicht geklappt.</h3>
