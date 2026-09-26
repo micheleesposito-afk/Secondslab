@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#08294f">
-  <title>SecondsLab — Content, der in Sekunden hängen bleibt</title>
-  <meta name="description" content="SecondsLab produziert hochwertige Social-Media-Videos für Unternehmen und Marken — On-Camera, Voice-over, B-Roll oder als Mix.">
+  <title>SecondsLab — Social Media Videos für Unternehmen</title>
+  <meta name="description" content="SecondsLab produziert moderne Social-Media-Videos für Unternehmen — einfach geplant, professionell gefilmt und fertig für Social Media.">
   <style>
     :root{
       --navy:#08294f;
@@ -340,6 +340,98 @@
     }
 
 
+  
+    /* Non-interactive explainer steps: intentionally not button-like */
+    .steps-plain{
+      gap:0;
+      margin:10px 0 30px;
+      border-top:1px solid rgba(255,255,255,.12);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .steps-plain .step-plain{
+      background:transparent !important;
+      border:0 !important;
+      border-radius:0 !important;
+      box-shadow:none !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+      padding:20px 18px;
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      position:relative;
+      overflow:visible;
+    }
+    .steps-plain .step-plain + .step-plain{
+      border-left:1px solid rgba(255,255,255,.10) !important;
+    }
+    .steps-plain .step-plain::before,
+    .steps-plain .step-plain::after{
+      display:none !important;
+      content:none !important;
+    }
+    .steps-plain .step-num{
+      width:28px;
+      height:28px;
+      min-width:28px;
+      margin:0;
+      font-size:12px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.16);
+      color:#dcecff;
+    }
+    .steps-plain h4{font-size:15px;margin:1px 0 4px}
+    .steps-plain p{font-size:13px;line-height:1.4}
+    @media(max-width:900px){
+      .steps-plain{
+        display:block;
+        border-top:1px solid rgba(255,255,255,.12);
+        border-bottom:1px solid rgba(255,255,255,.12);
+      }
+      .steps-plain .step-plain{
+        padding:15px 2px;
+      }
+      .steps-plain .step-plain + .step-plain{
+        border-left:0 !important;
+        border-top:1px solid rgba(255,255,255,.08) !important;
+      }
+    }
+
+  
+    /* Final mobile polish */
+    @media(max-width:600px){
+      .wrap{width:min(var(--max),calc(100% - 22px))}
+      .nav-in{height:76px}
+      .brand-logo{height:54px}
+      .nav .btn{padding:11px 14px;font-size:13px}
+      .hero{padding-top:18px}
+      .hero-copy{padding:34px 22px;min-height:auto}
+      h1{font-size:clamp(42px,13vw,58px);line-height:.96}
+      .hero-copy p{font-size:17px}
+      .hero-actions{display:grid;grid-template-columns:1fr;gap:9px}
+      .hero-actions .btn{width:100%}
+      .hero-card{padding:25px 21px}
+      .price{font-size:62px}
+      section{padding:30px 0}
+      .section-head{margin-bottom:18px}
+      .section-head h2{font-size:34px}
+      .config{padding:21px 17px}
+      .form{gap:13px}
+      input,select,textarea{font-size:16px}
+      .field.full .btn{width:100%}
+      .footer{padding:24px 20px}
+    }
+
+  
+    #submitBtn[disabled]{
+      opacity:.68;
+      cursor:wait;
+      transform:none;
+    }
+    #errorResult{
+      border-color:rgba(255,150,150,.25)!important;
+    }
+
   </style>
 </head>
 <body>
@@ -359,26 +451,26 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Social Content Studio · Creative Lab</div><div class="lab-kicker">SecondsLab <span class="lab-dot"></span> Content Formula</div>
+          <div class="eyebrow">Videos für Social Media</div><div class="lab-kicker">SecondsLab <span class="lab-dot"></span> Ideen werden zu Videos</div>
           <h1>Videos, die nach Marke aussehen.</h1>
-          <p>SecondsLab produziert kurze Social-Media-Videos für Unternehmen — modern, schnell und so, dass dein Content wie ein geschlossenes Produkt wirkt.</p>
+          <p>Wir produzieren kurze, hochwertige Videos für Unternehmen und Marken — passend zu deinem Auftritt und fertig für Social Media.</p>
           <div class="hero-actions">
-            <a class="btn btn-white" href="#anfrage">Projekt starten</a>
+            <a class="btn btn-white" href="#anfrage">Video anfragen</a>
             <a class="btn btn-outline" href="#arbeiten">Arbeiten ansehen</a>
           </div>
         </div>
         <aside class="hero-card">
           <div>
-            <div class="kicker">Beliebtes Content-Paket</div>
+            <div class="kicker">Beliebtestes Paket</div>
             <div class="price">800<small> €</small></div>
-            <h3>6 Social Videos</h3>
-            <p>Ideal für Unternehmen, die aus einem abgestimmten Dreh mehrere starke Reels bekommen möchten.</p>
+            <h3>6 fertige Videos</h3>
+            <p>Ideal, wenn du an einem Termin direkt mehrere Videos für deine Social-Media-Kanäle produzieren möchtest.</p>
           </div>
           <div>
             <ul class="clean-list">
               <li>6 fertig geschnittene Videos</li>
-              <li>Hochformat für Reels & TikTok</li>
-              <li>On-Camera, Voice-over oder B-Roll</li>
+              <li>Optimiert für Instagram, TikTok & Co.</li>
+              <li>Mit dir vor der Kamera oder komplett ohne</li>
               <li>Klare Abstimmung vor dem Dreh</li>
             </ul>
             <a class="btn btn-primary" style="width:100%" href="#anfrage">6er-Paket anfragen</a>
@@ -390,18 +482,18 @@
     <section id="arbeiten">
       <div class="wrap">
         <div class="section-head">
-          <h2>Echte Arbeiten.</h2>
-          <p>Keine Stockclips. Hier zeigen wir reale Social-Media-Produktion und erweitern das Portfolio Schritt für Schritt um weitere Branchen und Stile.</p>
+          <h2>Unsere Arbeiten.</h2>
+          <p>Hier siehst du echte Videos aus unseren Produktionen. Weitere Unternehmen und Branchen kommen nach und nach dazu.</p>
         </div>
         <div class="work-grid">
           <article class="video-card">
             <video src="assets/showreel.mp4" poster="assets/showreel-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-            <div class="video-overlay"><div><small>Food / Gastro · Referenz</small><h3>Produkt, Bewegung & Atmosphäre</h3></div></div>
+            <div class="video-overlay"><div><small>Gastronomie · Referenz</small><h3>Produkt, Bewegung & Atmosphäre</h3></div></div>
           </article>
           <div class="work-stack">
-            <article class="work-note dark"><div class="lab-kicker">LAB 01</div><span class="tag" style="background:rgba(255,255,255,.12);color:#fff">On-Camera</span><div><h3>Du vor der Kamera.</h3><p>Direkte Ansprache, Persönlichkeit und ein klarer Aufbau für Reels, die Vertrauen schaffen.</p></div></article>
-            <article class="work-note"><div class="lab-kicker">LAB 02</div><span class="tag">Voice-over</span><div><h3>Starke Bilder. Klare Stimme.</h3><p>B-Roll vom Unternehmen, Produkt oder Ablauf — getragen von einer kurzen, verständlichen Story.</p></div></article>
-            <article class="work-note"><div class="lab-kicker">LAB 03</div><span class="tag">Cinematic B-Roll</span><div><h3>Auch komplett ohne Sprechen.</h3><p>Detailaufnahmen, Bewegung, Licht und Sounddesign für einen hochwertigen visuellen Eindruck.</p></div></article>
+            <article class="work-note dark"><div class="lab-kicker">LAB 01</div><span class="tag" style="background:rgba(255,255,255,.12);color:#fff">Mit dir</span><div><h3>Du möchtest vor die Kamera?</h3><p>Dann bauen wir das Video so auf, dass du dich natürlich zeigen kannst — ohne kompliziertes Skript.</p></div></article>
+            <article class="work-note"><div class="lab-kicker">LAB 02</div><span class="tag">Ohne Kamera-Auftritt</span><div><h3>Du möchtest nicht vor die Kamera?</h3><p>Kein Problem. Wir filmen dein Unternehmen, deine Produkte und deine Arbeit und bauen daraus ein fertiges Video.</p></div></article>
+            <article class="work-note"><div class="lab-kicker">LAB 03</div><span class="tag">Wir kümmern uns darum</span><div><h3>Du musst nichts vorbereiten.</h3><p>Wir finden vor Ort die passenden Szenen und kümmern uns um Aufnahme, Schnitt und den fertigen Look.</p></div></article>
           </div>
         </div>
       </div>
@@ -411,12 +503,12 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Einfach auswählen.</h2>
-          <p>Keine komplizierte Agenturstruktur. Du sagst, was du brauchst — wir klären Stil, Dreh und Umsetzung.</p>
+          <p>Du sagst uns einfach, was du brauchst. Planung, Aufnahme und Schnitt übernehmen wir.</p>
         </div>
         <div class="grid-3">
-          <article class="card package"><span class="tag">Starter</span><h3>Content Test</h3><div class="big">2 Videos</div><p>Zum Kennenlernen oder für ein einzelnes Thema.</p><ul><li>Konzept-Abstimmung</li><li>Dreh & Schnitt</li><li>Social-ready Export</li></ul></article>
-          <article class="card package featured"><span class="tag" style="background:rgba(255,255,255,.12);color:#fff">Am beliebtesten</span><h3>Content Paket</h3><div class="big">6 Videos · 800 €</div><p>Mehrere Reels aus einem abgestimmten Produktionstermin.</p><ul><li>Stil vorab auswählen</li><li>On-Camera / Voice-over / B-Roll</li><li>6 finale Videos</li></ul></article>
-          <article class="card package"><span class="tag">Custom</span><h3>Mehr Content</h3><div class="big">Individuell</div><p>Für laufende Produktion oder größere Video-Pakete.</p><ul><li>Individuelle Stückzahl</li><li>Mehrere Formate</li><li>Persönliche Abstimmung</li></ul></article>
+          <article class="card package"><span class="tag">Zum Start</span><h3>2 Videos</h3><div class="big">2 Videos</div><p>Ideal zum Kennenlernen oder für ein einzelnes Thema.</p><ul><li>Kurze Planung mit dir</li><li>Dreh und Schnitt</li><li>Fertig zum Posten</li></ul></article>
+          <article class="card package featured"><span class="tag" style="background:rgba(255,255,255,.12);color:#fff">Am beliebtesten</span><h3>6er-Paket</h3><div class="big">6 Videos · 800 €</div><p>Mehrere fertige Videos aus einem gemeinsamen Produktionstermin.</p><ul><li>Kurze Planung mit dir</li><li>Mit dir vor der Kamera oder komplett ohne</li><li>6 fertig geschnittene Videos</li></ul></article>
+          <article class="card package"><span class="tag">Individuell</span><h3>Mehr Videos</h3><div class="big">Individuell</div><p>Wenn du regelmäßig oder mehr als sechs Videos brauchst.</p><ul><li>Anzahl nach Wunsch</li><li>Passend zu deinen Kanälen</li><li>Persönliche Abstimmung</li></ul></article>
         </div>
       </div>
     </section>
@@ -424,39 +516,46 @@
     <section id="anfrage">
       <div class="wrap">
         <div class="section-head">
-          <h2>Dein Video-Stil in 4 Schritten.</h2>
+          <h2>Deine Anfrage ist ganz einfach.</h2>
           <p>Die Anfrage ist bewusst simpel. Du musst keinen langen Briefing-Text schreiben.</p>
         </div>
         <div class="config">
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><h4>Video-Stil</h4><p>On-Camera, Voice-over, B-Roll oder Mix.</p></div>
-            <div class="step"><div class="step-num">2</div><h4>Inhalt</h4><p>Produkt, Räume, Team oder Dienstleistung.</p></div>
-            <div class="step"><div class="step-num">3</div><h4>Umfang</h4><p>Zum Beispiel 6 Videos für 800 €.</p></div>
-            <div class="step"><div class="step-num">4</div><h4>Kontakt</h4><p>Name, Unternehmen und Rückrufmöglichkeit.</p></div>
+          <div class="steps steps-plain" aria-label="So funktioniert die Anfrage">
+            <div class="step step-plain"><div class="step-num">1</div><div><h4>Vor die Kamera?</h4><p>Ja, nein oder noch unsicher.</p></div></div>
+            <div class="step step-plain"><div class="step-num">2</div><div><h4>Was möchtest du zeigen?</h4><p>Zum Beispiel dein Unternehmen, Produkte oder deine Arbeit.</p></div></div>
+            <div class="step step-plain"><div class="step-num">3</div><div><h4>Wie viele Videos?</h4><p>Du wählst nur den gewünschten Umfang.</p></div></div>
+            <div class="step step-plain"><div class="step-num">4</div><div><h4>Kontaktdaten</h4><p>Damit wir uns persönlich bei dir melden können.</p></div></div>
           </div>
-          <form class="form" id="briefForm">
-            <div class="field"><label for="style">Welcher Video-Stil?</label><select id="style" required><option value="">Bitte auswählen</option><option>Ich möchte selbst vor die Kamera</option><option>Voice-over + B-Roll</option><option>Nur B-Roll / cinematisch</option><option>Mix aus allem</option><option>Ich bin noch unsicher</option></select></div>
-            <div class="field"><label for="subject">Was sollen wir filmen?</label><select id="subject" required><option value="">Bitte auswählen</option><option>Produkte / Essen</option><option>Räume / Location</option><option>Team / Menschen</option><option>Dienstleistung / Ablauf</option><option>Mehrere Bereiche</option></select></div>
-            <div class="field"><label for="amount">Wie viele Videos?</label><select id="amount" required><option value="">Bitte auswählen</option><option>2 Videos</option><option>6 Videos · 800 €</option><option>Mehr als 6 Videos</option><option>Noch nicht sicher</option></select></div>
-            <div class="field"><label for="company">Unternehmen</label><input id="company" placeholder="Firmenname"></div>
-            <div class="field"><label for="name">Name</label><input id="name" placeholder="Vor- und Nachname" required></div>
-            <div class="field"><label for="contact">Telefon oder E-Mail</label><input id="contact" placeholder="Wie erreichen wir dich?" required></div>
-            <div class="field full"><label for="message">Noch etwas Wichtiges?</label><textarea id="message" placeholder="Optional: kurze Info zum Projekt"></textarea></div>
-            <div class="field full"><button class="btn btn-primary" type="submit">Anfrage zusammenstellen</button><p class="fine">Noch keine direkte Zahlung. Erst Anfrage, dann persönliche Abstimmung.</p></div>
+          <form class="form" id="briefForm" action="https://formspree.io/f/xqpadovk" method="POST"><input type="hidden" name="_subject" value="Neue SecondsLab Anfrage"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">
+            <div class="field"><label for="style">Möchtest du selbst im Video zu sehen sein?</label><select id="style" name="Vor der Kamera" required><option value="">Bitte auswählen</option><option>Ja, ich möchte vor die Kamera</option><option>Nein, lieber nicht</option><option>Ich bin noch unsicher</option></select></div>
+            <div class="field"><label for="subject">Was möchtest du hauptsächlich zeigen?</label><select id="subject" name="Was soll gezeigt werden" required><option value="">Bitte auswählen</option><option>Mein Unternehmen oder Geschäft</option><option>Meine Produkte oder mein Essen</option><option>Meine Arbeit oder Dienstleistung</option><option>Meine Räume</option><option>Mein Team</option><option>Mehrere Dinge</option><option>Ich bin noch unsicher</option></select></div>
+            <div class="field"><label for="amount">Wie viele Videos möchtest du ungefähr?</label><select id="amount" name="Gewünschter Umfang" required><option value="">Bitte auswählen</option><option>2 Videos zum Starten</option><option>6 Videos · 800 €</option><option>Mehr als 6 Videos</option><option>Ich bin noch unsicher</option></select></div>
+            <div class="field"><label for="company">Unternehmen</label><input id="company" name="Unternehmen" placeholder="Firmenname" autocomplete="organization"></div>
+            <div class="field"><label for="name">Name</label><input id="name" name="Name" placeholder="Vor- und Nachname" autocomplete="name" required></div>
+            <div class="field"><label for="contact">Telefon oder E-Mail</label><input id="contact" name="Kontakt" placeholder="Telefon oder E-Mail" autocomplete="email" required></div>
+            <div class="field full"><label for="message">Noch etwas Wichtiges?</label><textarea id="message" name="Nachricht" placeholder="Optional: kurze Info zum Projekt"></textarea></div>
+            <div class="field full"><button class="btn btn-primary" type="submit" id="submitBtn">Anfrage senden</button><p class="fine">Unverbindlich. Wir melden uns danach persönlich bei dir.</p></div>
           </form>
-          <div class="result" id="result"><pre id="summary"></pre><div class="result-actions"><button class="btn btn-primary" type="button" id="copyBtn">Anfrage kopieren</button><button class="btn" style="background:#e8eef5;color:var(--navy)" type="button" id="shareBtn">Teilen</button></div><p class="fine">Für den automatischen E-Mail-Versand fehlt nur noch deine endgültige SecondsLab-Kontaktadresse.</p></div>
+          <div class="result" id="result" role="status" aria-live="polite">
+            <h3 style="margin-bottom:8px">Danke! Deine Anfrage ist angekommen.</h3>
+            <p style="margin:0;color:#dbe8f6">Wir schauen sie uns an und melden uns persönlich bei dir.</p>
+          </div>
+          <div class="result" id="errorResult" role="alert" aria-live="assertive">
+            <h3 style="margin-bottom:8px">Das hat gerade nicht geklappt.</h3>
+            <p style="margin:0;color:#dbe8f6">Bitte versuche es noch einmal oder schreibe direkt an <strong>info@secondslab.de</strong>.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap"><div class="section-head"><h2>So läuft's.</h2><p>Vom ersten Klick bis zu den fertigen Clips bleibt der Prozess übersichtlich.</p></div><div class="process"><article class="card"><strong>01</strong><h3>Anfrage</h3><p>Stil, Inhalt und Umfang auswählen.</p></article><article class="card"><strong>02</strong><h3>Dreh</h3><p>Wir planen die Szenen und produzieren den Content.</p></article><article class="card"><strong>03</strong><h3>Videos</h3><p>Du erhältst die fertig geschnittenen Social-Media-Clips.</p></article></div></div>
+      <div class="wrap"><div class="section-head"><h2>So läuft's.</h2><p>Du musst kein Video-Profi sein. Wir führen dich durch den ganzen Ablauf.</p></div><div class="process"><article class="card"><strong>01</strong><h3>Kurze Anfrage</h3><p>Du sagst uns nur, was du zeigen möchtest und ob du vor die Kamera willst.</p></article><article class="card"><strong>02</strong><h3>Wir filmen</h3><p>Wir planen vor Ort die passenden Szenen und kümmern uns um die Aufnahme.</p></article><article class="card"><strong>03</strong><h3>Fertige Videos</h3><p>Du bekommst fertig geschnittene Videos, die du direkt posten kannst.</p></article></div></div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer">
-      <div class="footer-copy"><img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAIaCAYAAADMVuDfAAAng0lEQVR4nO3d6XLjOLIGUHqi3v+VNT+K7pJlLVwAIjNxTkTH9O1bZZFYEp9giPq63W4LAACwLP8bfQEAABCFcAwAACvhGAAAVsIxAACshGMAAFgJxwAAsBKOAQBgJRwDAMBKOAYAgJVwDAAAK+EYAABWwjEAAKyEYwAAWAnHAACwEo4BAGAlHAMAwEo4BgCAlXAMAAAr4RgAAFbCMQAArIRjAABYCccAALASjgEAYCUcAwDASjgGAICVcAwAACvhGAAAVsIxAACshGMAAFgJxwAAsBKOAQBgJRwDAMBKOAYAgJVwDAAAK+EYAABWwjEAAKyEYwAAWAnHAACwEo4BAGD1Z/QFAABd3V78969LrwKSEI4BoJ5XgfjVnxGUYSUcA0AdW0Lxp78nKDM14RgA8jsSih9D8O3ufwVkpuUDeQCQW4tg/Pjfbgd/LqRn57itvYXEO3MAzmgdYL8efqZdZKYjHB/Tqhj5BDEAR/Xa2X0MyDAVxyq2uy3X/ZrpytcCYD6f1pfHIxYwDeH4s9EhVVAG4FGLNWHPz7AGMQ3h+LWIgTTiNQFwrZbrwLuf9eppFlCacPxc9AIQ/foAyGNPQIbyhOOfMu3MZrpWANoYXfdHvz50Jxz/8+md8/c/0ShUAJxl9xhWwvFf7x6p9lgUIhYJARmgvt613loCi3C8LMeeNRw1ICtsAPTg0W5MY/ZwXPFLOBQtAI6yhjC9mcPxswIQ9VzxXoobQC3qOlxk1nD8Khif+fsAUMGW36paBylrxnA8SzDOcp0AAGHMGI4fbQ3GGT/wlu16AQCGmi0cP4bFPcE4q8zXDsAYjlYwrZnC8YzB+FuFewAA6O7P6AsITKAEAJjMLDvHe3eNKwbjivcEwFjWFsqZJRzfq/AcYwAAOpghHO99V1v5XXDlewOgrYrfIgsfzRCO7814nAIAWrJWUlr1cLxnApvsAEQUfX2Kfn2wS/VwfM+vgf5SxADY6vbw79YQyvMot79MdiAiZz6J4Hsc+gIQplA5HN9PXAsJkMWW0KG+cbXHcfa1CMgUNdOxildMbiCCo7+yVsMAGqq8c/zNrgoQ3bud4D07yeodo9wW448iqu4cb91JmXXHZdb7hog+HZEQOAAuNMPOMb9ZbCGG1meHR+7ePXvTrdbU8Ti2bLJQ1szh2MSG2M7O0ejBrFcN6h2Qzzw/Pnqf8J51kynMHI6BeFouvpme6PDu+qIEkhbXkalPgEkJx8BoV4S/aB9Y6/25iJa7xz13uL9F6ReAKcLxs0Uiyk4MzGzEPIwWkpcl1rXcu7J/IvYLMKmK4fhZQReG/7H4MFqE+ZghjJ1tpzO7x6P6yOPActN/lFD1UW5APEe/5KKnkbvXyxIzSIzuo9GvD0yu4s7xI4+e+SfiQswcIs+9iLvIkdvrChH7BJhE9XAc/bvgnxX+XtdnkcnhaP9H7t9Ic+6dq38lfMVr7b2naH3l1/TA5aqH46jeFfsegdniEtunL0/Y8/XBj393pGhBa4sIYWzked+IIvQJMBHh+HpHivyZoyEWlbh6faNYhKAcNWhtMWMYy9xfAE0Jx/m8WrRnXNCz2huKzxwHGnF2s0LQqjSfPt1Lhv6q1B9AcNWfVvFY9EcvAj2Lu4Ujh2dfp3vV2dMrv2yjgp738u5NLgADzbBzbLG53p42nyXU9zpCsVfPHbiKc611e0Vro2jX847dY+ASM4TjKCoX9TMLbITzsb092y0+8/fP6hEytoT/TEGsGt8UCrCRcMwZPULbtypB+Uww7hleWgbkrbvi0R6luJUdyzj0Ba9UfAwmg1QMx1kX4EyuPLuauXAdDcZXjd8WQSPKcZHeqoUyNZIKWozjs7/Zo6CK4Zh+Rn3VbrZidTQwVmjfbH0VyZVviiCzLYE20xN+CKb60ypoZ+SCetWTFlo4+jSK0e3b4u99us8sffhK9utfFvdAbo9rwbv62uK3YsbapOwc88mn4nDmC0r2yraLHD0UnzFbMP7WYgz6YpYaPJXnuV51etRnUuwkT6hqOHbuuI13bTjqA1eRA/Le4h1pjO5p11mDMbT4LUvU+hVVlLaLvPbQmGMVvPJqEfh0TOCqL7SIJnMwPmPGYFzxnniv5a/Y/bp+uyjB+Ju+m4RwzDPvgnEUkQpUlWC85br23GvU+xxFe7Rz5YcXe73Wnp8dqfZe5Www7v0oTAqreqxiWRytOOrso7lma/Mqwbi16vfpV6y1XTl+jaXfjgTjq2uOfivMzjGfRA7G2QJYtut9tHXByn6fzG3UIxX568iGw6j2c8yiKOH4Ohkm0JkvrRhZnEaZ9YiBYPzXTPc6iyj1ZFZ7a2qUNotyHTRSPRz7lcd2R4JxpOJ0tT33XaGNKtwDvBNhjEe4hggybjZEvCYOqnzmmONanJ29srhFOPv16hqqFUy7xj9FGHucF2nsZh9TR699ax9E6qtH2fuOVfWd42WJNVCjTuq9u6Bng/H3n4nUN3vcPxT+/p/Hdona36+86o+9T7GAK7R8tFo0Ea+ppwrBmEJmCMfLkjeEXWHPcYothWlvW7fqmwhF8zsgVz1uYh5RTeR5GvnaRsjSHlmukzdmCceRRJ44Vwfjs39vhPtd40rsGh+39/6f/fnZ23AEbR7Dlvmgr7jUTOG4WpiJ5mz7tugfBfSYrcdgaOe21P4tA23MPDYyz4+M18ydmcLxssRZ4KNMnFbPrY3Srr3dXvx7Zmf7rko7MJdM4zbTte71/QG2+39guNnC8bKYfHtdWZiz902mRWzLQpTpfkbb21bCwDjGdWzmBMN5lNs4ox/5cvZ768m5yB7pa+Ojrcf29FX3fFJxfFS8J4qYced4WSz2Wyle/2Rvix67lNnbJBI16RrGLPDRrOF4WWIsRgo1PfnVPdWpoUSk5iY3czhelhgDeERxt6Dsk629WgTibPccwbs2+9Se2rs/bRzHqw83Z306BcU4c+y83yvaJJ8eb/bOPP+4pUpfW/34eYNs1w+tmQOEIhz/NTogj/5wHrlVHjtbn8GcbXHNdr3Zae84ovRFrzf+levxNGY/VnFv9IC+qmC8+jaiM8/wbXXtUYrmvYjXdG/0uO1pz71VbgegrXf14syxNHWoCOGYe8575VK5EHvkHK2oadzbWif21hP1pxDh+KfRgztzET977ZnvfYQrxmqU88YALRwJvFuPdlGIcPzb6EF+9TfStXzU19FrF7ZoZab5C9GMnn+9vFonPSqzKOH4udGD/YoF9tm3dLUw6rxyD1Gvrff4HH3fo+cfdYwey/yUvT++lvabSgQkHMc1ooi0DMhbnuva+h5nKFYz3CNAa2onm3mU22sRHg+V/RFvo9sPAGAXO8fvZQ6mR2QOs637KnNbZKftARhGOP5sdEBuGRTePctYIIlv9FjMwDgG4BThOIdeC/5t6XP292pCI/AoQl1Tm2LQD+zizPE2zh/HNUubjLjPZ2Puym9y3HvPo+covHrc1yNjFQKzc7zdLCEsE33S320Z9xuGPa8nbDCarzuHIoTjXASAfywu/URq2y1j3rxgpKPPvJ3xWbmj7leNYBfHKvZxvCKG6l+C8Wj2/o7WH/CtxdyMsK60MHudohA7x2Qy405LBNodfms5J8wvCEQ43i9CEauwy7CHcDbO14t/B4CShOO8ZgjIQvFYWz95z2farZYe/TnLGHHumPCE42NmKWKjCMUAwBDCcW7V3gkLxbFUG1/Mw9jlGeOCTYRjohCKc7C4QD+z1MFZ7pOkPMotP492oydhGH5Sb3/L1CbWTD6yc1xD9gCjUMWjT+Cf+/mQvd5GMbLG6EPeEo4B4LWvh/+lHW1KSMIxoymOVGI8c4Ydzetoa14Sjusw0QHIxvEKwhGOIb5RBdwuKPxkTvQhIBOKcAxANb3DVo9AlTWkVXjDkLXt6UQ4PibqRIp6XTCDCiGB39TVa4yeP/qZ/wjH+5lAbWnPbbQTxPAd4lrOSfP7LwGZEITjfbJPnNGFh3NGjD9jZi5fL/6Z3au512JOZl9XWhs93vQHwvEOJkw/2nY7bUUv70LJ6MASTasvBTGfnzPeGKri10cfKTaPE1HBIjJffxrPlv74WuLWluzXf4XHeXffHre7/7b1Z1XQsw6NHG9q7OQqhWPv3nNTjPa5sr1mD0XV7RlHs4+FZwH5+7/f/+/y8GdmbjNIp8Kxitui8FShH/fRXv05e/tblnbodZ2vAvCrcWKeHuf5xwyRPRwbvPW0erNze/PPJ1kW/2Xx5rCnZ+Ng63/LIvO1j/RpzmnXdgRkLpf5WIVBW1vPM3x7f3YGve/Jr4a5d/V4iLgbW7GORKX+cKms4dgkOS5bkel5rRXPOVuwr6Wd+3u1Wx+ljj1eR6Rr6+nqsT+qXSuuE3yQ/VgFnFV1Eetx3GKmBeLVvVYaLzP054h7rDRGYEoZw7HCA9s5k9zPkeBVKZBWuhdyMOa4RMZwDK29+vR5Ja0CcrV2eWaGewS2s8EwGeF4Thb/OdlF/uzd3LhvO3MoD33V3sg21Z90ly0cW9hhPIsTo/ngKdBNtnAM7Pf4xQQt3mRWDCUz7RpnuYdW15nlftnGBy3pSjiG1yosqI9fdfv4dbf8tTUYw+wq1EV4Szie14wFbrZ77n2/Vdpzz320uOcq7dZb63bS7sAmwnEtiv9z9zum2qit7O356fqrHaeowE4+0JVwnMfXwz8cd/VOYVQzh4wt80gw/qzn15X3eG39eI72YwrCcV5+vbvNDPc4WsU2nvmNQ2Q+TAp0JxznoJj39al9M7b/1V9/nKmN9uwYb/nzPa5hZle0jfYHXsoWjhW017TNb9rkWhXa+4pgXE3LNprpcXrZaHOmkS0cz8gTB9o7sshmaiffXvXeq91zwXicEZ+lqNS/Ge7l9uIfCEc4js0uynGztsme5/WO/DDVaLeHfx8RjEe1U6T+2RqKe9W7SG0R2Zl2+hSCo4ZkH4CfmHCcU+tCMuvk33vf0dsp0vVFupZXXoXiDNceTc8nR/QOTtn7O/JjKvf0XaSA/NiWEduWjjKG41kGacVf919ly+5ppXbb+1iyq2Rr4xHXW+koQY9HJPptx3hXts3WOtWznhkLpAzHMxjxVbZVCkLvtovQTpmeee0a59KyHa8+6pJxHETe4Txab6Mes2AiWcNxpALQ0qfi3HuxyN6uV+22Z/vA27OFptKO5VFRwtBV15DldUadAR/xWj1EOJPdItxu/eBsS9n7nkb+jL4A/lPt/OvVth4rmK3dIu3AfLf96GuKOAa+llqL/qf7uS2/r+nVnx913GX0OP3kXbtkuP4totzDs/FKYZnDcZXJf+TsXe9zg9nadcR52+jt9O7aRhf5USF59H2PMvKpGJ8C8pafMUqUN3PPbGmXszVq1vkCy9ftFnHe75L1BvYUnhGPbcvQriMfAfXs51/lzJuByAuep7DUbYO99xXluu9FqYl72+bIdbc4GpPNpyONEccknQjH1zp7XvTqyRm5bffuuPdsuwgBees1ZCzwn+4t4z19cnZMRW6TSMcnjhhZF684AywY/yQYT6hCOF6WmJOxdYEZNTmztu3VbyoittM9xT2fETt+bHflnG/Vr1e80YxeC58RjvmhSjheljgTskdxGT0xo7TtssQMxq9eO4rR44dzop/NxSM2H0Wsg68IxvyS+QN5jyJ8QKrHr6MiTMwIbbvV6K/VjtRWEcYO5+nH+I4ec9rys+hnxHcKkEClcLwssT9d/E6GM3hRQt+rd/KRdttHj8NI4wZmZA7Gt/WJH0yo0rGKRxE+JPVO1icKLEuMkPwugEZsv95tFvGegXlFWCde2fLEHzV1YtV2ju9F2em8V+VT96N3Rl+9duT2u7+2Kl9jDZDNiOfik0zlneN70W8ye9CJ0L7Z23BZYh0NATgrwtpwzzepssks4fhbtJutNgF94xkA9yKtu1s+gGddofSximda/2r77DVUc1X7Vm5DAPr49IFuawvLsswXju8Jcn1teaLEmZ8FQHwRP/9zTzDml9mOVexV+St5AeBKUQOHNZwfZt453sKEAYA2ou0iW+N56n+jLwAAmMbXEiOURrgGgrJzDABcbdTz8oViPhKOAYBRrgrJQjGbCccAwGg9niAlEHOIcAwARPIYareEZUGYZoRjACAywZdLeVoFAACshGMAAFgJxwAAsBKOAQBgJRwDAMBKOAYAgJVwDAAAK+EYAABWwjEAAKyEYwAAWAnHAACwEo4BAGAlHAMAwEo4BgCAlXAMAACrP6MvAABgo1uHn/nV4WeSmHAMAETQI/i2fF0hehLCMQAwwqgwfNSr6xWaixGOAYArZAvDWz3el7CcnHAMUMe78GHBZoSqgfid+3s27xISjgFy2hs67G5xlRkD8SuCckLCMUAOrQOHRZvWhOL3zLkkhGOAuK4KG9+vY8HmCKF4P3MuMOEYIJ7Rj7SyYLOFUHyeOReQcAwQR5SwcVss1rwWZZxWIiQHIhwDjBcxbFiseSbiWK3EvAvgf6MvAGBy0cNG9OvjGrfFWLiSth5IOAYYJ8sCmOU66UP/j+ENySDCMcAY2Ra9bNfLecJZDPrgYsIxwPWyLnZZr5v99HUs+uNCPpAHcK3si5wnWdR3ZIy+GhPZx3sk5t5F7BwDXKdKUKhyH/y2t2+/lveBTZhry9y7gHAMcI1qi1q1++FYMG7559jG3Ovs63bTxgdtbThFAahcaNW4GnoF4zOvwXvmXifC8XYtG8qAhnnMUGTVtNxanjHu8Vq8Zu514AN57/WaxPc/18CGugQBKrJuUZozx7/dlmuf7eg5klDTTPN6pnut5orjFPRj7nUgHP8zOqSOfn2AM9SvfPRZDfqxMeE4XiiNdj3AfuYw0V15zpj+1JyGZg/HkQeTkAw5zTxvZ753GM38a2TWcJwpeGa5TsB8XRZtkMGoXWNjgxRmDMcZJ2fGawYgHscpapMXGpgtHGceNJl2u2FG5uc/2oJHxsR1tPVJM4XjKoOlyn1AJeblb9okHscpYINZwnG1iVntfgCAduSEE2YIx1UHSNX7gmzMxde0TRx2jWGj6uG4+qSsfn8QnTkIr5kfY2n/gyqH41kGxSz3CeSkRo3nCRWwQ9VwPFsxnu1+IQLzbjttNR99HoN+OKBiOJ51IMx63zCC+QavmR+kVi0czz4hZ79/IC71aQxHKjD3dqoWjjEJoDdzDKCwSuHYggUQmzod39ldY30ck37ZoUo41uk/aQ/ow9w6TxteR1vDAVXCMb8pitCWOQXvmSOx6Z+NKoRjnQ2Qi7odkw/iwbIsf0ZfAF3dFsUOWjga5t7NPwGRnq4eX8ZzDnLBBtl3jk1GIKpPC9DXhj9Tmfody8xjEX7IHo75zAIE53hObD/qUw36MRf99UHmcKxzt9NWcMwVc0eQBggkczgGiEjY3ceb9/GM2fmYd28Ix/MwEWCfK+eMcEJLV45dawvlZA3HJiMQkZB7jJo+jjELD7KGY4CehLXrafN89Flu+u8F4XguJgL0c2YHztwECCJjOLaIAD15dNs46vu1jFt4ImM45hyLD7w2Yn6Yk7R01XgybmvQj08IxwDn2H1ry2INDCUcA/xl15iZeFMHL/wZfQE77VlIXk18i9HfNlAY4TzzqA81KjbrKKVV3Tl+V1QVXOCRXeN4tA9cw1x7UDEcbwm/AjJwlke3kZU1EN6oFo73TPjZi4PFGf4yF+LSN/HoE8rLduYYIAK7xkRkbL23dd5qx8llCscGK9CauhKfD+dxxpGxc/931IgJVTpWoXgCV7BrTGYzjd8WuUC2mFClcMx+2QodtGT856Gv2ONraRtqW/88ghOOAbabadctGu3HFj1DbOWAbH7dEY6BGVkIoJ4rwmvlgMxKOAZmczQY2zUeTzueU3kMXxlaBeTisoTj6JMSABhjRFgVkAvLEo7pxxsPZmLXOD/tyb2RIVVALko4BgCAlXAMzMKucR3a9bcZ2yTCzm2Ea6Ax4RgA6vMmDzaaORyb7DAPu8b1aF+isHtcTJVwbGACzEdAnpd1n26qhGPOscBQmV1jgM/UrZVwDEBmFnSgKeEYqMyuMXAFxzwKyRCOLTQAvGOd6EfbMp0M4RjgCLvGAOwmHANQgTcmQBPCMVCRXWP4yfiEjYRjAKoQANvSnttpq0KEY76Z2FRh1xie2zNOjWmmJRwDUMmMoa516J2xDeE/wjGAZ5Qyl9vyPAC/+u8RZblOEvoz+gIAGhqxYFqk47kt3vBsYey2oR2LsXMMzE6IqklgAQ6xcwxUMfOu8auAH+X6oIcIvyGoNMdGt2UYwjEws8yLwZZrv/8zlRbxrSKEJ/rSxzQnHAMVzLRrfDQIfP+9GUMy9GAuFeXMMTCrbLtNX0uba271c7IQYOqb6c0xFxCOuWeyk9EMC2OPMDtTQKa+K+ektbI44Rggtp4hdpaALMzM4Yp+NpYmIBwDmVX/qugrwussAZk59Poik0xfkMJJwjFATFeG1hkCsmAzl5b9PcPYmaEGbOZpFcBssuwaA+d8z9ejc958n5RwDGRVeeEasYvztdRu02WZ+5m4M39RzOM9ztwWbCAcAzOxa8yM3o37GZ9/PdO9ckCFM8ez7gLAzCovbiNr2gz1tPLYeWZrn87Q97BJhXAM0NtsgYoa9gZeARkW4RjIZ8Tj26jFmx34R218UCEcK3IAzKr1GigoMb0K4RjgEx/E41H1fhVy4SDhmEfVFwxyMz4B6Eo4BnhNGK9N/wK/CMdAFj6IB0B3wjHAc3YV56Cff9Iec7F58IRwDGRg1xiASwjHAMzObinwH+EY4DdhiVn5bcs89PULwjEQ3WxBdeT9ztbW92a+d+COcAxUdXRXREhidnYUmZpwDEQ2a1Adcd+ztvU9bfCPgFyb/n1DOAaI6cqgJhTWo0/hIOEYiMru6TXXE+2eR9MeMDnhGCC2nmFNEIT5OFLxgXAMVFUp+PW4l0rt01qVtqlyH3Ap4RiIyJGK31peX/R7pR19zT27xhsIx0Blt2VbOMgSILbez6efwWezt9Ps98/E/oy+AIAHPY8QPO6aZA0Ar+7n059nTrfFjiFsJhzzjEJKVdVCYrX7iaZSLdxzL8ZVTVXGcneOVQCRWJShn0pHjKAbO8cAMI9qR4zYxq7xDsIxALxW6WjFPWEYXqgSjqsWL5jJ2cX6VQ0QAoCZyUc7OXMMZPe1vC/+n/7/8Ik3WDCRmcOxxRLiOBo+9sxjcx6Yjbp3wMzhGMjtSNG3UHCU3WOYhHAMAFCPzYCDhGNgtKt35CwYHGX3GCYgHAMA1GIT4AThGBjpig/iQUt2j6E44RjISEABeM7mwUkZwrFOhpoEXLIydolKZmogQzjeSrECtlArAHipUjgG5iLkAvxj17iRauF4z2JpYYVxRs0/855WjCUiEYwbqhaOt1LUoAZviIHZCcaN/Rl9AR18L4DPBovFEcZrPQ/fzfkerwffbotgAuVUDMffLIgwF3MemI03Zx3MeqwCAFrwpoxRBONOhGPgSoIEwHmCcUfCMQCc400fVxKMOxOOeUWxpzVjCuAcwfgCs4RjgwkAyEyWuUjlp1U8DqL7/9sOFgAteawbvb3LLsZeQ1XD8adB8rUIyHAl8w2gn2c1VmA+qOKxiq2DwaABoCVvAonkdvcPO1QMx3sIyNCfwgwwlpC8Q7VwLOwCMJIAQmRC8gbVwjEAAO8JyW8Ix0BPii9AXELyE9XCsQ4GYDRrEdkYs3eqheO9DAbox/yC/nzWhlbsIq9mD8cA0IOQQVbTj92K4Xhrp07f+QAAT0ydkap+Q953pz77ddPUHQ4XMc8AcnuXpUqrGo6/WaABGOW2TBgsKGe6cVzxWAUwljelALVMVdeFYwDoZ6pQQWnTjGXhGACALaYIyMIx0NIUhROAuoRjAOjLm0YqKT+es4TjqT4lCUmVL5gALMtSvN5nCccAkFnpMMGUyo5p4RgAAFbCMe+UfVdIc8YKwHxK1n7hGACuUTJIQDXCMXCWBR9gXuXWAOEYAK5TLkjAUmxcC8cAALASjoEzSu0WQFK+C4AIyqwHwjEAXKtMiICKhGM+UcQBgC1KZAbhGDiqRBEEgHvCMQBcz5tLqko/toVj4Ij0xQ8AnhGOAQBoKfUGinDMFqkHOUBQaisEJBwDe1nQAfgk7VohHAMAwCpTOPYNQGOlfQdIU8YBtGVOQTCZwjEAAHmkfPMnHAMAwEo4Zo+U7wBpRv9DHy3mlqOH0IhwDABAL+k2VoRjAABYCcfsle4dIE3od+jLHIMghGOAWpw9BaJJ9ebvz+gLIKXbYgGGKJ7NxWf/LdXiBMltXSPNy4CEY+ATxTumvW9Qv/+8/ozLxkN+R+flspibYQjHHKWIwxhn552QDO21WA/NzSCcOeYME7g+fRxLyzek3tzCeV9L+7lUdW6mWU+EY4AceiyYVRfhzNIECLrOH3NzIOGYsxRy6M8izBb68jpXtLX+HEQ4pgUBuSb9GoNFGGK5cr6YmwMIx7QiSAFQ3YiwWikgp8gKwjEtpRj0kIgdqjmppTwyPy+ULRwbHPEp6jXox/HsUEEso+fH6NefRrZwTA6CFQCQknBMLwIyHDdyh8juVAxqaCxR5kWU6yhNOKan26LAZ6TPAJiWcMwVhGTYzs4QxGJOTkY45koCMuQgDOSl7+rL3sfhs4BwzNXsIsemb8bKvugBpCccM8ptEZQB3lEfYQDhmAgEZYi3axztegAukTEcK9i1CcoAwDB/Rl8AvPEsIEd5c3RVeL/yfr0hAWB6wjHZfApwrcJklKAY+Q0C7UTt068lzlyY1W2JOz6gJOGYamZYyB/v0cIJAI1kPHMM/OSMNnDPG+ba1PvOhGOo40xIVmzHEWQgNvVxMo5VQD3OKNKSc8eQx7Pab/7ulHXn2MIP7zlqAVDPkbouM+2UNRwD2wjIsVm0IIcMtfRdPVFrdhCOob5PRT1D0YeZmaMsi3FwGWeOAcawkzOfxz4XdnLxeY42wrehnWOYg0WYM8IvZsF9Lc/bsGe76rNa1PALCccwD8UV4JwRdXTLa3oz1FDmcGwgwH4CMsRiLcvnyjqqZg+QORwDZCUQQW5XhNaWryFk7yAcw3xuL/4dgO16Pk9+z8/1Zrsx4RjmJBQDtNF6h1d9Hkw4BrhW1l2erNc9M312nbOh9ujfz9bHKa7Xc45hXnYnANq6r6ufguBVNVit3yl7OP5adDoAEE/vfJJiFzYjxyoArmMxA1rYWktsIB4gHAPAOMILBCMcA1zDrvGcRvf76Nenvay7xmnGYvYzxwAAM0gTLrOrsHNssAAAle3NOtF2jVOpEI4BovMmHjiqQjBOVQOFYwC2SrXABRClvaJcB/t8LTWCcTrOHAP0JZjwytYgYwzNo2Jfp7unKuHYl4EAAFd7F/y25JKWwVEOaqRKOAaIKN2OCWXZRGrv0/y+cv7r24aEYwBozxuj2qL0b/RQHKWddvGBPIA+Ui4KG1S9r6tFDzXEZwx1UikcK9gARNByPYr6sxgrQzBOO94cqwBoL+2iAISWIRSnV2nnGIBrCP+vbWkbASe/q/vwNuA1z0hdI6rtHPs0Lvz1rDCZG9dIvShwSuu+7zGWrJPt3Jb+811fDVAtHAOvi7VFEcYzB2u5788WQbnC+Ei/QfB1u1Xoh19K3hRs4Fe6Y6VfFHYylv7Z2vd72qzneNJ39FCiBjpzDHVsLUolildA2nVe2YIx8IZwDADH9QjGVxC+aa3MmKoajst0EJDCrDVn1vv+1uv+Z29X8ik1ZquGY5hNqcIEwX0t++ZctF3jb+oGLZQbR5XDcbnOAkKavdbMdv9773dvMJ6tPSGcyuEYeC7qLhZE1zsYjyCMc0bJ8VM9HJfsNHhgnI+j7f+q3g57j1Esy7FgXL0dqaXseK0ejgF6Kbsw8J8joXhZ8gVjY5m9So8Z4Rhyq/hrXnKqtFgeDcXLki8Yw17lx+sM4bh8JwKXU1eey94uZ0LxsuR+85m976CZGcIxVGUxG0O7v5etfb6W86F4WY4H40jtFelaiGmKMfJn9AVc5GvJ/Y4eWng2B77e/P+gslaL/Jm5M0XQoIxpxqudY8hpmiIVjHbfJno7CcavRb0uxppqXMwUjqfqWEpr9el5c2If7bVP5fa6LTWD8bfo18e1phsPM4Vj4LXpit9O2ueYiu129ghSxTahrinH62zheMpOphS7xtfTVudEbL+9Afe2nN8tXpaYbfFKpmulj2nHwGzhGDLrXaimLYR0l3VstQjE3zK2QcZrpo2p+37GcDx1h5NWyy8kMAe201btRGvLV6G31S7xvWj3vkfma+eY6fv863ab9glO09446VwdjM2Nv6ZfIDqaZYxVGkOz9NnsKo3Zw2bcOYZMFKoxtHtfM7RvtXusdj/8po9XM4djg4DoWn+N7dafN/vcmP3+r1K1nVt8215UVe9rdpXH7CEzh+NlMRiIa1QwbvH6mc1636NUW5Qr3csrM9zjTPTnE7OHY4iodTBmG4vEONlDcvbr32ume61MP74w8wfy7mkEIjhbqF6NY2H7M4tELBnGnTGTo594zvh9w87xXwYJo/Uag2d/7gxzY4Z7zCbqTuzXEvfaRtAO+Ri/G/wZfQEwuVZFqufzjL9e/PwKLBKx3ffPiDFofHz23UZVa0QlxvNGjlX8pDG4UoZg/Ol1srJI5Nd6PBoT51WqEZUY2zsJx79pEHprWah6nDM+8nqZWCigrwp1ogr17gDh+DmNQg+ti9TVwXjLa0dmkYDrZKwRlah3JwjHr2kYWrkqFPd4rXcyzRELBYyRqU5UoNY1IBy/p3E4asSxhlFFMfI8sVBADJHrRAVqXUPC8TYaia16FqiRxyi2iDRPorQJ8FOkOpGdOteJcLydhuKdEaG49+seNWquRGwL4Dlr6nFqXWfC8T4ai2cE4/d6z5ss7QD8Zl3dRp27kHB8jEbj26hHpmUvlEfnUPb7Bl6ztv6k3g3iG/KOqfyNYYxXYbf4kyr3AbQz+hsRI1AbAxCOj/OVmbRWfbcYYKvHeld1rVXXAxKOzxOSOUsoBnivQlhWy5MQjttx1IK9hGKAY47UxyvWaHW7AOG4LbvIbCEUA1xPbWUT4bgPHyqYx23ZVnC3jAOFGwAGE477s5tc37uAbJcYABIRjq9jN7m27z7dcvZcIAaAoITjMSp86pbnXvWlQAwACQjHMTwLTgJzbsIwACQkHMf1KVwJz3EIwgBQhHCcV8tAJmh/JgADwASEY5bl+uAXJYwLvADAD8IxIwilAEBI/xt9AQAAEIVwDAAAK+EYAABWwjEAAKyEYwAAWAnHAACwEo4BAGAlHAMAwEo4BgCAlXAMAAAr4RgAAFbCMQAArIRjAABYCccAALASjgEAYCUcAwDASjgGAICVcAwAACvhGAAAVsIxAACshGMAAFgJxwAAsBKOAQBgJRwDAMBKOAYAgJVwDAAAK+EYAABWwjEAAKyEYwAAWAnHAACwEo4BAGAlHAMAwEo4BgCAlXAMAAAr4RgAAFbCMQAArIRjAABYCccAALASjgEAYPV/9wbOXKPR2SwAAAAASUVORK5CYII=" alt="SecondsLab"><div><strong>Social Media Content für Unternehmen.</strong><p>On-Camera · Voice-over · B-Roll</p><div class="legal-note">Impressum und Datenschutz vor geschäftlicher Nutzung mit deinen echten Unternehmensdaten ergänzen.</div></div></div>
+      <div class="footer-copy"><img class="footer-logo" src="data:image/png;base64,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" alt="SecondsLab"><div><strong>Social Media Content für Unternehmen.</strong><p>Einfach anfragen · wir kümmern uns um den Rest</p><div class="legal-note">Impressum und Datenschutz vor geschäftlicher Nutzung mit deinen echten Unternehmensdaten ergänzen.</div></div></div>
       <a class="btn btn-white" href="#anfrage">Projekt anfragen</a>
     </div>
   </footer>
@@ -464,31 +563,53 @@
   <script>
     const form=document.getElementById('briefForm');
     const result=document.getElementById('result');
-    const summary=document.getElementById('summary');
-    form.addEventListener('submit',e=>{
+    const errorResult=document.getElementById('errorResult');
+    const submitBtn=document.getElementById('submitBtn');
+
+    form.addEventListener('submit',async e=>{
       e.preventDefault();
-      const txt=`SECONDSLAB PROJEKTANFRAGE\n\nVideo-Stil: ${style.value}\nInhalt: ${subject.value}\nUmfang: ${amount.value}\nUnternehmen: ${company.value||'-'}\nName: ${name.value}\nKontakt: ${contact.value}\nNachricht: ${message.value||'-'}`;
-      summary.textContent=txt;
-      result.style.display='block';
-      if(!result.classList.contains('glass-reveal')){
-        result.classList.add('glass-reveal');
-        const sheen=document.createElement('span');
-        sheen.className='glass-sheen';
-        result.appendChild(sheen);
+      result.style.display='none';
+      errorResult.style.display='none';
+      submitBtn.disabled=true;
+      const originalText=submitBtn.textContent;
+      submitBtn.textContent='Wird gesendet …';
+
+      try{
+        const response=await fetch('https://formspree.io/f/xqpadovk',{
+          method:'POST',
+          body:new FormData(form),
+          headers:{'Accept':'application/json'}
+        });
+
+        if(!response.ok) throw new Error('Formspree error');
+
+        form.reset();
+        result.style.display='block';
+        if(!result.classList.contains('glass-reveal')){
+          result.classList.add('glass-reveal');
+          const sheen=document.createElement('span');
+          sheen.className='glass-sheen';
+          result.appendChild(sheen);
+        }
+        requestAnimationFrame(()=>result.classList.add('is-visible'));
+        result.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }catch(err){
+        errorResult.style.display='block';
+        if(!errorResult.classList.contains('glass-reveal')){
+          errorResult.classList.add('glass-reveal');
+          const sheen=document.createElement('span');
+          sheen.className='glass-sheen';
+          errorResult.appendChild(sheen);
+        }
+        requestAnimationFrame(()=>errorResult.classList.add('is-visible'));
+        errorResult.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }finally{
+        submitBtn.disabled=false;
+        submitBtn.textContent=originalText;
       }
-      requestAnimationFrame(()=>result.classList.add('is-visible'));
-      result.scrollIntoView({behavior:'smooth',block:'nearest'});
-    });
-    document.getElementById('copyBtn').addEventListener('click',async()=>{
-      await navigator.clipboard.writeText(summary.textContent); document.getElementById('copyBtn').textContent='Kopiert ✓';
-      setTimeout(()=>document.getElementById('copyBtn').textContent='Anfrage kopieren',1800);
-    });
-    document.getElementById('shareBtn').addEventListener('click',async()=>{
-      if(navigator.share){await navigator.share({title:'SecondsLab Projektanfrage',text:summary.textContent});}
-      else{await navigator.clipboard.writeText(summary.textContent); alert('Anfrage wurde kopiert.');}
     });
 
-    const revealSelectors='.hero-card, .work-note, .card, .config, .step';
+    const revealSelectors='.hero-card, .work-note, .card, .config';
     const revealEls=[...document.querySelectorAll(revealSelectors)];
     revealEls.forEach((el,index)=>{
       el.classList.add('glass-reveal');
@@ -539,5 +660,6 @@
       window.addEventListener('resize',updateGlass);
     }
   </script>
+
 </body>
 </html>
