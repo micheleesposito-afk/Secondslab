@@ -609,9 +609,245 @@
       .section-head h2{font-size:31px}
     }
 
-  </style>
+  
+
+    /* SecondsLab 2026 — Champagne Gold + dezente Lab-Blasen */
+    :root{
+      --gold:#d9b56f;
+      --gold-2:#f0d79d;
+      --gold-soft:rgba(217,181,111,.18);
+    }
+    body{
+      position:relative;
+      isolation:isolate;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(255,255,255,.035) 0 1px, transparent 2px),
+        linear-gradient(180deg,#061a31 0%,#08294f 48%,#061a31 100%);
+    }
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.88;
+      background-repeat:no-repeat;
+    }
+    body::before{
+      background-image:
+        radial-gradient(circle at 4% 12%, transparent 0 9px, rgba(235,246,255,.55) 10px 11px, transparent 12px),
+        radial-gradient(circle at 7% 28%, transparent 0 5px, rgba(235,246,255,.38) 6px 7px, transparent 8px),
+        radial-gradient(circle at 3% 57%, transparent 0 7px, rgba(235,246,255,.42) 8px 9px, transparent 10px),
+        radial-gradient(circle at 8% 82%, transparent 0 11px, rgba(235,246,255,.36) 12px 13px, transparent 14px),
+        radial-gradient(circle at 96% 16%, transparent 0 7px, rgba(235,246,255,.50) 8px 9px, transparent 10px),
+        radial-gradient(circle at 93% 36%, transparent 0 10px, rgba(235,246,255,.38) 11px 12px, transparent 13px),
+        radial-gradient(circle at 97% 63%, transparent 0 6px, rgba(235,246,255,.42) 7px 8px, transparent 9px),
+        radial-gradient(circle at 94% 88%, transparent 0 12px, rgba(235,246,255,.34) 13px 14px, transparent 15px);
+      filter:drop-shadow(0 0 5px rgba(170,215,255,.10));
+    }
+    body::after{
+      opacity:.38;
+      background-image:
+        radial-gradient(circle at 6% 18%, rgba(255,255,255,.7) 0 1.5px, transparent 2px),
+        radial-gradient(circle at 5% 44%, rgba(255,255,255,.55) 0 1px, transparent 2px),
+        radial-gradient(circle at 9% 69%, rgba(255,255,255,.65) 0 1.5px, transparent 2px),
+        radial-gradient(circle at 95% 24%, rgba(255,255,255,.6) 0 1px, transparent 2px),
+        radial-gradient(circle at 96% 51%, rgba(255,255,255,.7) 0 1.5px, transparent 2px),
+        radial-gradient(circle at 91% 77%, rgba(255,255,255,.55) 0 1px, transparent 2px);
+    }
+    .gold-word{color:var(--gold-2);text-shadow:0 0 24px rgba(217,181,111,.10)}
+    .btn-primary,
+    .btn-white{
+      background:linear-gradient(135deg,var(--gold-2),var(--gold)) !important;
+      color:#08294f !important;
+      border:1px solid rgba(255,255,255,.20) !important;
+      box-shadow:0 8px 24px rgba(217,181,111,.12);
+    }
+    .btn-primary:hover,
+    .btn-white:hover{box-shadow:0 10px 30px rgba(217,181,111,.20)}
+    .eyebrow,.kicker,.lab-kicker{color:var(--gold-2)}
+    .clean-list li:before{color:var(--gold-2)}
+    .price{color:var(--gold-2)}
+    .package.featured{
+      border:1px solid rgba(217,181,111,.75) !important;
+      box-shadow:0 18px 55px rgba(0,0,0,.28),0 0 32px rgba(217,181,111,.08) !important;
+    }
+    .package.featured .big,
+    .package.featured h3{color:var(--gold-2)}
+    .section-head h2::after{color:var(--gold)}
+    .step-num{background:var(--gold);color:#08294f}
+    .tag{border:1px solid rgba(217,181,111,.28)}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(217,181,111,.09)}
+    @media(max-width:700px){
+      body::before{opacity:.52;background-size:auto}
+      body::after{opacity:.25}
+    }
+
+  
+    /* SecondsLab — reduzierte Gold-Akzente (ca. 90% Blau/Weiß, 10% Gold) */
+    .eyebrow,.kicker,.lab-kicker{color:#d8e3ef}
+    .clean-list li:before{color:#ffffff}
+    .price{color:#ffffff}
+    .package.featured .big,.package.featured h3{color:#ffffff}
+    .section-head h2::after{color:inherit}
+    .step-num{background:var(--navy);color:#ffffff}
+    .tag{border:1px solid rgba(255,255,255,.14)}
+
+    /* Standard-Buttons wieder clean weiß/blau */
+    .btn-primary,.btn-white{
+      background:#ffffff !important;
+      color:#08294f !important;
+      border:1px solid rgba(255,255,255,.55) !important;
+      box-shadow:none;
+    }
+    .btn-primary:hover,.btn-white:hover{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+
+    /* Gold nur an den wichtigsten Stellen */
+    .nav .btn-primary{
+      background:rgba(255,255,255,.08) !important;
+      color:var(--gold-2) !important;
+      border:1px solid rgba(240,215,157,.22) !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 10px 22px rgba(0,0,0,.12);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+    .nav .btn-primary:hover{
+      background:rgba(255,255,255,.11) !important;
+      border-color:rgba(240,215,157,.32) !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.10), 0 12px 26px rgba(0,0,0,.16);
+    }
+    #submitBtn{
+      background:rgba(255,255,255,.08) !important;
+      color:var(--gold-2) !important;
+      border:1px solid rgba(240,215,157,.22) !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 10px 22px rgba(0,0,0,.12);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+    #submitBtn:hover{
+      background:rgba(255,255,255,.11) !important;
+      border-color:rgba(240,215,157,.32) !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.10), 0 12px 26px rgba(0,0,0,.16);
+    }
+    .package.featured{
+      border:1px solid rgba(217,181,111,.48) !important;
+      box-shadow:0 18px 55px rgba(0,0,0,.28),0 0 20px rgba(217,181,111,.045) !important;
+    }
+    .package.featured .tag{
+      color:var(--gold-2) !important;
+      border-color:rgba(217,181,111,.30);
+    }
+    input:focus,select:focus,textarea:focus{
+      border-color:#94a7bb;
+      box-shadow:0 0 0 4px rgba(8,41,79,.07);
+    }
+
+
+    /* SecondsLab premium bubble field — subtle, animated, behind the glass */
+    body::before, body::after{display:none !important;}
+    body > *:not(.lab-bubbles){position:relative;z-index:1;}
+    .lab-bubbles{
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:hidden;
+      opacity:1;
+      mask-image:linear-gradient(to right,#000 0 16%,transparent 27% 73%,#000 84% 100%);
+      -webkit-mask-image:linear-gradient(to right,#000 0 16%,transparent 27% 73%,#000 84% 100%);
+    }
+    .lab-bubble{
+      --size:18px;
+      --x:5vw;
+      --duration:17s;
+      --delay:0s;
+      --drift:18px;
+      position:absolute;
+      left:var(--x);
+      bottom:-90px;
+      width:var(--size);
+      height:var(--size);
+      border-radius:50%;
+      border:1px solid rgba(225,241,255,.38);
+      background:
+        radial-gradient(circle at 32% 27%, rgba(255,255,255,.34) 0 7%, rgba(255,255,255,.06) 12%, transparent 34%),
+        radial-gradient(circle at 62% 66%, rgba(135,194,235,.07), transparent 66%);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.025),
+        0 0 14px rgba(146,205,246,.045);
+      opacity:.44;
+      filter:blur(.05px);
+      animation:bubbleRise var(--duration) linear var(--delay) infinite;
+      will-change:transform,opacity;
+    }
+    .lab-bubble.soft{opacity:.30;filter:blur(.45px)}
+    .lab-bubble.tiny{opacity:.34}
+    @keyframes bubbleRise{
+      0%{transform:translate3d(0,0,0) scale(.92);opacity:0}
+      8%{opacity:.42}
+      35%{transform:translate3d(calc(var(--drift) * .65),-38vh,0) scale(.98)}
+      62%{transform:translate3d(var(--drift),-72vh,0) scale(1.01)}
+      82%{opacity:.36}
+      100%{transform:translate3d(calc(var(--drift) * -.35),-118vh,0) scale(1.04);opacity:0}
+    }
+
+    /* Let the background bubbles read softly through the frosted cards */
+    .hero-card,.work-note,.card,.config,.step,.result{
+      background:linear-gradient(145deg,rgba(15,57,96,.54),rgba(4,24,46,.43)) !important;
+      -webkit-backdrop-filter:blur(16px) saturate(118%);
+      backdrop-filter:blur(16px) saturate(118%);
+    }
+    .hero-copy{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(145deg,rgba(10,49,92,.92),rgba(6,26,49,.89)) !important;
+      -webkit-backdrop-filter:blur(10px) saturate(110%);
+      backdrop-filter:blur(10px) saturate(110%);
+    }
+    .hero-copy::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      border-radius:inherit;
+      background:linear-gradient(120deg,rgba(255,255,255,.045),transparent 28%,transparent 76%,rgba(151,203,242,.025));
+    }
+    .hero-copy > *{position:relative;z-index:1}
+
+    @media(max-width:700px){
+      .lab-bubbles{
+        opacity:.72;
+        mask-image:linear-gradient(to right,#000 0 22%,transparent 36% 64%,#000 78% 100%);
+        -webkit-mask-image:linear-gradient(to right,#000 0 22%,transparent 36% 64%,#000 78% 100%);
+      }
+      .lab-bubble:nth-child(n+13){display:none}
+    }
+    @media(prefers-reduced-motion:reduce){
+      /* Respektiert die iOS/Browser-Einstellung „Bewegung reduzieren“. */
+      .lab-bubble{animation:none;transform:translateY(-45vh);opacity:.18}
+    }
+
+</style>
 </head>
 <body>
+  <div class="lab-bubbles" aria-hidden="true">
+    <span class="lab-bubble tiny" style="--size:10px;--x:3vw;--duration:18s;--delay:-8s;--drift:16px"></span>
+    <span class="lab-bubble" style="--size:22px;--x:7vw;--duration:20s;--delay:-21s;--drift:-14px"></span>
+    <span class="lab-bubble soft" style="--size:34px;--x:12vw;--duration:22s;--delay:-4s;--drift:22px"></span>
+    <span class="lab-bubble tiny" style="--size:7px;--x:16vw;--duration:16s;--delay:-17s;--drift:-10px"></span>
+    <span class="lab-bubble" style="--size:15px;--x:5vw;--duration:18s;--delay:-26s;--drift:12px"></span>
+    <span class="lab-bubble soft" style="--size:27px;--x:19vw;--duration:15s;--delay:-13s;--drift:-18px"></span>
+    <span class="lab-bubble tiny" style="--size:9px;--x:96vw;--duration:17s;--delay:-5s;--drift:-12px"></span>
+    <span class="lab-bubble" style="--size:20px;--x:92vw;--duration:21s;--delay:-24s;--drift:18px"></span>
+    <span class="lab-bubble soft" style="--size:32px;--x:87vw;--duration:15.5s;--delay:-11s;--drift:-20px"></span>
+    <span class="lab-bubble tiny" style="--size:8px;--x:83vw;--duration:16s;--delay:-19s;--drift:10px"></span>
+    <span class="lab-bubble" style="--size:14px;--x:95vw;--duration:19s;--delay:-29s;--drift:-16px"></span>
+    <span class="lab-bubble soft" style="--size:25px;--x:80vw;--duration:22s;--delay:-2s;--drift:14px"></span>
+    <span class="lab-bubble tiny" style="--size:6px;--x:10vw;--duration:15s;--delay:-10s;--drift:8px"></span>
+    <span class="lab-bubble tiny" style="--size:6px;--x:90vw;--duration:15.5s;--delay:-14s;--drift:-8px"></span>
+  </div>
+
   <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="#top" aria-label="SecondsLab Startseite">
@@ -629,7 +865,7 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Videos für Social Media</div><div class="lab-kicker">SecondsLab <span class="lab-dot"></span> Ideen werden zu Videos</div>
-          <h1>Videos, die nach Marke aussehen.</h1>
+          <h1>Videos, die nach <span class="gold-word">Marke</span> aussehen.</h1>
           <p>Wir produzieren kurze, hochwertige Videos für Unternehmen und Marken — passend zu deinem Auftritt und fertig für Social Media.</p>
           <div class="hero-actions">
             <a class="btn btn-white" href="#anfrage">Video anfragen</a>
@@ -646,7 +882,7 @@
           <div>
             <ul class="clean-list">
               <li>6 fertig geschnittene Videos</li>
-              <li>Optimiert für Instagram, TikTok & Co.</li>
+              <li>Optimiert für Social Media.</li>
               <li>Mit dir vor der Kamera oder komplett ohne</li>
               <li>Klare Abstimmung vor dem Dreh</li>
             </ul>
